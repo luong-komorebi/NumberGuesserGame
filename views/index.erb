@@ -1,9 +1,57 @@
-<html>
-    <head></head>
-    <body>
-        <p>
-            The SECRET number is <%= number %>!
-        </p>
-    </body>
 
-</html>
+<html>
+    <head>
+        <style>
+      body {
+        background-color: <%= background %>;
+      }
+      .container {
+        margin-top: 200px;
+        text-align: center;
+      }
+      h1 {
+        font-family: Garamound, sans-serif;
+        font-size: 45px;
+      }
+      h3 {
+        font-family: Garamound, sans-serif;
+        color: #484848;
+      }
+      form input[type=text] {
+        width: 118px;
+                font-size: 32px;
+                line-height: 32px;
+        text-align: center;
+      }
+      form input[type=submit] {
+        height: 40px;
+        font-size: 30px;
+        text-align: auto;
+        margin-left: 12px;
+      }
+      .form-stuff {
+        position: static;
+      }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>
+            <%= message %>
+        </h1>
+        <form><div class="form-stuff">
+        <input type='text' name='guess' />
+        <input type='submit' value='Guess!' />
+      <input type="hidden" name="cheat" value='false' />
+    </div>
+        </form>
+        <h3>
+        You have <%= remaining %> guesses left.
+    </h3>
+   <h1>
+      <%= end_message %>
+    </h1>
+    <h3> <%= cheat_mode %> </h3>
+    </div>
+    </body>
+    </html>
